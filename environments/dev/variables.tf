@@ -12,3 +12,9 @@ variable "vpc_cidr" {
   description = "VPC CIDR"
   type        = string
 }
+
+variable "region" {
+  description = "AWS region for resources"
+  type        = string
+  default     = "eu-central-1"
+}
