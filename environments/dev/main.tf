@@ -1,7 +1,8 @@
 module "vpc" {
   source      = "../../modules/vpc"
-  vpc_cidr    = "10.0.0.0/16"
-  environment = "dev"
+  vpc_cidr    = var.vpc_cidr
+  environment = var.environment
+  region      = var.region
 }
 
 module "security" {
