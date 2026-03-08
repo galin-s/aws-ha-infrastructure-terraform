@@ -8,6 +8,7 @@ module "vpc" {
 module "security" {
   source = "../../modules/security"
   vpc_id = module.vpc.vpc_id
+  environment = var.environment
 }
 
 module "ec2" {
@@ -29,4 +30,14 @@ module "alb" {
   public_subnet_ids = module.vpc.public_subnet_ids
   vpc_id            = module.vpc.vpc_id
   asg_name          = module.ec2.asg_name
+}
+
+module "rds" {
+  source = "../../modules/rds"
+
+  environment        = var.environment
+  private_subnet_ids = module.vpc.private_subnet_ids
+  db_sg_id           = module.security.rds_sg_id
+  db_username = "postgres"
+  db_password = "myPassword"
 }
