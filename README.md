@@ -11,6 +11,7 @@ This repository contains a **highly-available (HA) AWS infrastructure** configur
 │ ├── alb/ # Application Load Balancer module
 │ ├── ec2/ # EC2 Auto Scaling module
 │ ├── security/ # Security groups module
+│ ├── rds/ # RDS module
 │ └── vpc/ # VPC, subnets, S3 & NAT & Internet Gateways
 ├── README.md
 └── versions.tf # Terraform required versions
@@ -22,6 +23,7 @@ This repository contains a **highly-available (HA) AWS infrastructure** configur
 - **EC2 Auto Scaling**: Launch templates with user data to start Nginx, auto scaling group with min/max/desired capacity.
 - **Application Load Balancer**: HTTP listener and target group for EC2 instances.
 - **Security Groups**: Separate SGs for ALB and EC2 instances.
+- **RDS**: Separate SGs for ALB and EC2 instances.
 - Modular design for easy reuse and maintainability.
 
 ## Prerequisites
