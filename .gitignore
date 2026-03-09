@@ -3,9 +3,9 @@
 *.tfstate
 *.tfstate.*
 *.tfvars
-
+.terraform.lock.hcl
 # Mac
 .DS_Store
 
 # Logs
-*.log.terraform.lock.hcl
+*.log
