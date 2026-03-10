@@ -3,7 +3,7 @@
 *.tfstate
 *.tfstate.*
 *.tfvars
-.teerraform.lock.hcl
+.terraform.lock.hcl
 
 # Mac
 .DS_Store
